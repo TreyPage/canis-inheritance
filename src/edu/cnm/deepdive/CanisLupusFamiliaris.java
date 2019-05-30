@@ -1,8 +1,13 @@
 package edu.cnm.deepdive;
 
-public class CanisLupusFamiliaris extends CanisLupus {
+public class CanisLupusFamiliaris extends CanisLupus implements Trainable{
 
   private static int instanceCount = 0;
+
+  @Override
+  public void perform() {
+    System.out.println("Does tricks!");
+  }
 
   @Override
   public void hunt() {
@@ -21,5 +26,6 @@ public class CanisLupusFamiliaris extends CanisLupus {
   public static int getInstanceCount() {
     return instanceCount;
   }
+
 
 }
